@@ -1,0 +1,12 @@
+proyecto_fraccionamiento/
+│
+├── frontend/                 
+│   ├── index.html            (Estructura visual y persuasiva)
+│   ├── css/styles.css        (Estilos, colores y tipografías)
+│   ├── js/app.js             (Lógica de captura de datos y UTMs)
+│   └── imagenes/             (Recursos visuales optimizados)
+│
+└── backend/                  
+    ├── main.py               (API en FastAPI para recibir y calificar leads)
+    ├── requirements.txt      (Dependencias del servidor)
+    └── .env                  (Variables de entorno y tokens de seguridad)

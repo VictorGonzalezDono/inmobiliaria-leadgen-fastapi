@@ -1,0 +1,223 @@
+/* =========================================
+   VARIABLES DE DISEÑO (Colores Inmobiliarios)
+   ========================================= */
+:root {
+    --color-primario: #1A365D; /* Azul corporativo oscuro */
+    --color-acento: #D4AF37;   /* Dorado/Mostaza para exclusividad */
+    --color-fondo: #F7FAFC;
+    --color-texto: #2D3748;
+    --fuente-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   RESETEO BÁSICO Y TIPOGRAFÍA
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   HERO SECTION (El Gancho Visual)
+   ========================================= */
+#hero {
+    background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('../imagenes/terrenos.jpg') center/cover;
+    /* ... lo demás se queda igual ... */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+#hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   BOTONES (Llamados a la Acción)
+   ========================================= */
+button {
+    background-color: var(--color-acento);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #B5952F;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   SECCIONES GENERALES
+   ========================================= */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* =========================================
+   AMENIDADES Y MODELOS (Nuevas Secciones)
+   ========================================= */
+.subtitulo {
+    color: #4A5568;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Grid de Amenidades */
+.grid-amenidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.amenidad-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.amenidad-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.amenidad-item h3 {
+    font-size: 1.3rem;
+    color: var(--color-primario);
+}
+
+/* Grid de Modelos (Tarjetas) */
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.tarjeta-modelo {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.tarjeta-modelo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 25px;
+}
+
+.caracteristicas {
+    list-style: none;
+    margin: 20px 0;
+    color: #4A5568;
+}
+
+.caracteristicas li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* Botón secundario para las tarjetas */
+.btn-secundario {
+    background-color: var(--color-primario);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-secundario:hover {
+    background-color: #2a4a7f;
+}
+
+/* =========================================
+   FORMULARIO (Zona de Conversión)
+   ========================================= */
+#contacto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    padding: 40px;
+    max-width: 600px;
+    margin: 20px auto 80px auto; 
+    position: relative;
+    z-index: 10;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input, select {
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--fuente-principal);
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Móviles)
+   ========================================= */
+@media (max-width: 768px) {
+    #hero h1 { font-size: 2rem; }
+    #contacto { padding: 20px; }
+}

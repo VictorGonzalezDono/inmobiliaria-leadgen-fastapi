@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraccionamiento [Nombre] | Exclusividad y Plusvalía</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<section id="hero">
+    <h1>Tu nuevo estilo de vida en Fondo de Bikini</h1>
+    <p>Preventa exclusiva. Casas desde $X,XXX,XXX MXN.</p>
+    <button onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">Agendar Visita VIP</button>
+</section>
+
+<section id="amenidades">
+        <h2>Diseñado para tu tranquilidad</h2>
+        <p class="subtitulo">Descubre todo lo que nuestro fraccionamiento tiene para tu familia.</p>
+        <div class="grid-amenidades">
+            <div class="amenidad-item">
+                <h3>🛡️ Seguridad 24/7</h3>
+                <p>Acceso controlado y circuito cerrado.</p>
+            </div>
+            <div class="amenidad-item">
+                <h3>🌳 Áreas Verdes</h3>
+                <p>Parques equipados y pet-friendly.</p>
+            </div>
+            <div class="amenidad-item">
+                <h3>🎉 Casa Club</h3>
+                <p>Espacios diseñados para tus eventos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelos">
+        <h2>Conoce nuestros prototipos</h2>
+        <div class="grid-modelos">
+            <div class="tarjeta-modelo">
+                <img src="imagenes/lote.jpg" alt="Modelo A">
+                <div class="contenido-tarjeta">
+                    <h3>Modelo A - "Esmeralda"</h3>
+                    <ul class="caracteristicas">
+                        <li>🛏️ 3 Recámaras</li>
+                        <li>🛁 2.5 Baños</li>
+                        <li>📏 120 m² Construcción</li>
+                    </ul>
+                    <button class="btn-secundario" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">Me interesa este</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-modelo">
+                <img src="imagenes/casa-modelo-b.jpg" alt="Modelo B">
+                <div class="contenido-tarjeta">
+                    <h3>Modelo B - "Zafiro"</h3>
+                    <ul class="caracteristicas">
+                        <li>🛏️ 4 Recámaras</li>
+                        <li>🛁 3 Baños</li>
+                        <li>📏 150 m² Construcción</li>
+                    </ul>
+                    <button class="btn-secundario" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">Me interesa este</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Solicita la tabla de precios y disponibilidad</h2>
+        <form id="lead-form">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="tel" id="telefono" placeholder="WhatsApp (10 dígitos)" required>
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
+            <select id="modelo-interes">
+                <option value="Modelo A">Interés en Modelo A</option>
+                <option value="Modelo B">Interés en Modelo B</option>
+                <option value="Inversion">Busco para Inversión</option>
+            </select>
+            <button type="submit">Enviar y contactar por WhatsApp</button>
+        </form>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
